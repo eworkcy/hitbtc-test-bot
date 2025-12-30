@@ -1,6 +1,9 @@
 import requests
 import pandas as pd
-from config import BASE_URL, SYMBOL
+import os
+
+BASE_URL = os.getenv("HITBTC_BASE_URL", "https://api.demo.hitbtc.com/api/3")
+SYMBOL = os.getenv("SYMBOL", "BTCUSDT")
 
 # ===== COMMON =====
 def get_candles(limit=200):

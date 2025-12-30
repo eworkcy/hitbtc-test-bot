@@ -2,6 +2,8 @@ from flask import Flask, request, render_template_string
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from strategy import get_candles, ma_strategy, macd_strategy
+import os
+SYMBOL = os.getenv("SYMBOL", "BTCUSDT")
 
 app = Flask(__name__)
 

@@ -1,7 +1,10 @@
 import time
 from hitbtc_client import get_price, get_balance, place_order
 from strategy import get_candles, ma_strategy, macd_strategy
-from config import SYMBOL
+import os
+
+SYMBOL = os.getenv("SYMBOL", "BTCUSDT")
+
 
 # ===== CONFIG =====
 STRATEGY = "macd"   # "macd" or "ma"
